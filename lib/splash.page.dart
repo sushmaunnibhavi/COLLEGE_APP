@@ -76,7 +76,7 @@ img(),
             icon: Icon(Icons.message),
             onPressed: () {
               // Redirect to user "about" page.
-              Navigator.pushNamed(context, 'about');
+              Navigator.pushNamed(context, 'chat');
             }, // null disables the button
             iconSize: 40,
             color: Colors.grey,

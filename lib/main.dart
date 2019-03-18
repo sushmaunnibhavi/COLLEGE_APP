@@ -7,7 +7,7 @@ import 'about.page.dart';
 import 'home.page.dart';
 import 'splash.page.dart';
 import 'auth.dart';
-
+import 'chat.dart';
 void main() {
 
   // Create router.
@@ -26,6 +26,11 @@ void main() {
   // Define about page.
   router.define('about', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return new AboutPage();
+  }));
+
+
+  router.define('chat', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new ChatPage();
   }));
 
   // Run from splash page!
