@@ -8,6 +8,11 @@ import 'home.page.dart';
 import 'splash.page.dart';
 import 'auth.dart';
 import 'chat.dart';
+import 'event.dart';
+import 'dapartment.dart';
+import 'Aero.dart';
+import 'comp.dart';
+import 'ise.dart';
 void main() {
 
   // Create router.
@@ -33,6 +38,31 @@ void main() {
     return new ChatPage();
   }));
 
+  router.define('ise', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new IsePage();
+  }));
+
+
+  router.define('event', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new EventPage();
+  }));
+
+
+
+
+  router.define('department', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new DepartmentPage();
+  }));
+
+
+  router.define('aero', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new AeroPage();
+  }));
+
+
+  router.define('comp', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new CompPage();
+  }));
   // Run from splash page!
   runApp(new MaterialApp(
       title: 'App',

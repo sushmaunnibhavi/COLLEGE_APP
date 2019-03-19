@@ -46,7 +46,7 @@ img(),
             icon: Icon(Icons.event),
             onPressed: () {
               // Redirect to user "about" page.
-              Navigator.pushNamed(context, 'about');
+              Navigator.pushNamed(context, 'event');
             }, // null disables the button
             iconSize: 40,
 
@@ -63,11 +63,11 @@ img(),
             color: Colors.grey,
           ),
           IconButton(
-            icon: Icon(Icons.share),
+            icon: Icon(Icons.school),
             onPressed: () {
               // Redirect to user "about" page.
 
-              Navigator.pushNamed(context, 'about');
+              Navigator.pushNamed(context, 'department');
             }, // null disables the button
             iconSize: 40,
             color: Colors.grey,
