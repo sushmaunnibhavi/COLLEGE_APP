@@ -54,10 +54,10 @@ img(),
 
           ),
           IconButton(
-            icon: Icon(Icons.link),
+            icon: Icon(Icons.file_upload),
             onPressed: () {
               // Redirect to user "about" page.
-              Navigator.pushNamed(context, 'about');
+              Navigator.pushNamed(context, 'upload');
             }, // null disables the button
             iconSize: 40,
             color: Colors.grey,

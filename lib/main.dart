@@ -13,6 +13,7 @@ import 'dapartment.dart';
 import 'Aero.dart';
 import 'comp.dart';
 import 'ise.dart';
+import 'upload.dart';
 void main() {
 
   // Create router.
@@ -45,6 +46,10 @@ void main() {
 
   router.define('event', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return new EventPage();
+  }));
+
+  router.define('upload', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new UploadPage();
   }));
 
 

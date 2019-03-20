@@ -24,6 +24,7 @@ class _CompPageState extends State<CompPage>
             fit: BoxFit.fitWidth,
 
 
+
           ),
          Text('The Computer Science and Engineering department is one of the pioneering departments at NMIT. The department was established in 2001. The department is progressing dynamically in all academic and research areas. '),
           Text('The objective of the department is to educate, train and develop world class research and IT professionals with a mastery of hardware and software skills and also soft skills required for professional success. '),
