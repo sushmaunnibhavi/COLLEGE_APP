@@ -7,13 +7,19 @@ import 'about.page.dart';
 import 'home.page.dart';
 import 'splash.page.dart';
 import 'auth.dart';
-import 'chat.dart';
+import 'comments.dart';
 import 'event.dart';
 import 'dapartment.dart';
 import 'Aero.dart';
 import 'comp.dart';
 import 'ise.dart';
 import 'upload.dart';
+import 'mech.dart';
+import 'electrical.dart';
+import 'electronics.dart';
+import 'contacts.dart';
+import 'chat.dart';
+
 void main() {
 
   // Create router.
@@ -35,9 +41,6 @@ void main() {
   }));
 
 
-  router.define('chat', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return new ChatPage();
-  }));
 
   router.define('ise', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return new IsePage();
@@ -48,9 +51,6 @@ void main() {
     return new EventPage();
   }));
 
-  router.define('upload', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return new UploadPage();
-  }));
 
 
 
@@ -68,6 +68,42 @@ void main() {
   router.define('comp', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return new CompPage();
   }));
+
+
+  router.define('mech', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new MechPage();
+  }));
+
+
+  router.define('ele', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new ElectricalPage();
+  }));
+
+  router.define('eln', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new ElectronicsPage();
+  }));
+
+
+  router.define('contact', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new ContactPage();
+  }));
+
+  router.define('upload', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new UploadPage();
+  }));
+
+
+
+  router.define('chat', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new ChatApp();
+  }));
+
+
+  router.define('comments', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new Comments();
+  }));
+
+
   // Run from splash page!
   runApp(new MaterialApp(
       title: 'App',

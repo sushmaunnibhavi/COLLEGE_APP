@@ -26,7 +26,7 @@ class eve extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('EVENTS'),
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.black,
         ),
 
         body: StaggeredGridView.count(crossAxisCount: 2,
@@ -35,12 +35,7 @@ class eve extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 0.0),
           children: <Widget>[
 
-            Image.asset(
-              'assets/images/event1.png',
 
-
-
-            ),
 
             Image.asset(
               'assets/images/event7.jpeg',
@@ -80,15 +75,16 @@ class eve extends StatelessWidget {
 
           staggeredTiles: [
 
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
+            StaggeredTile.extent(2, 200),
+            StaggeredTile.extent(2, 200),
+            StaggeredTile.extent(2, 200),
+            StaggeredTile.extent(2, 200),
+            StaggeredTile.extent(2, 200),
+
+
           ],
         ),
-        backgroundColor: Colors.black
+        backgroundColor: Colors.grey
 
     );
   }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+
 
 class SplashPage extends StatefulWidget {
   @override
@@ -14,10 +12,14 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
+
     return new Scaffold(
 
 
-      body: dashboard(),
+      body: dashboard()
+
+
+
 
 
     );
@@ -30,17 +32,16 @@ class dashboard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Dashboard'),
-backgroundColor: Colors.grey,
+backgroundColor: Colors.black,
       ),
 
-      body: StaggeredGridView.count(crossAxisCount: 2,
+      body:
+      StaggeredGridView.count(crossAxisCount: 2,
         crossAxisSpacing: 10,
         mainAxisSpacing: 0,
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 0.0),
+
         children: <Widget>[
-
 img(),
-
           IconButton(
 
             icon: Icon(Icons.event),
@@ -50,7 +51,8 @@ img(),
             }, // null disables the button
             iconSize: 40,
 
-            color: Colors.grey,
+            color: Colors.black,
+
 
           ),
           IconButton(
@@ -60,7 +62,7 @@ img(),
               Navigator.pushNamed(context, 'upload');
             }, // null disables the button
             iconSize: 40,
-            color: Colors.grey,
+            color: Colors.black,
           ),
           IconButton(
             icon: Icon(Icons.school),
@@ -70,35 +72,47 @@ img(),
               Navigator.pushNamed(context, 'department');
             }, // null disables the button
             iconSize: 40,
-            color: Colors.grey,
+            color: Colors.black,
           ),
-          IconButton(
-            icon: Icon(Icons.message),
-            onPressed: () {
-              // Redirect to user "about" page.
-              Navigator.pushNamed(context, 'chat');
-            }, // null disables the button
-            iconSize: 40,
-            color: Colors.grey,
-          ),
+
           IconButton(
             icon: Icon(Icons.contacts),
             onPressed: () {
               // Redirect to user "about" page.
-              Navigator.pushNamed(context, 'about');
+              Navigator.pushNamed(context,'contact' );
             }, // null disables the button
             iconSize: 40,
-            color: Colors.grey,
+            color: Colors.black,
           ),
-          IconButton(
-            icon: Icon(Icons.video_library),
-            onPressed: () {
-              // Redirect to user "about" page.
-              Navigator.pushNamed(context, 'about');
-            }, // null disables the button
-            iconSize: 40,
-            color: Colors.grey,
-          ),
+
+IconButton(
+
+  icon: Icon(Icons.message),
+  onPressed: () {
+    // Redirect to user "about" page.
+    Navigator.pushNamed(context, 'chat');
+  }, // null disables the button
+  iconSize: 40,
+
+  color: Colors.black,
+
+
+),
+
+IconButton(
+
+  icon: Icon(Icons.comment),
+  onPressed: () {
+    // Redirect to user "about" page.
+    Navigator.pushNamed(context, 'comments');
+  }, // null disables the button
+  iconSize: 40,
+
+  color: Colors.black,
+
+
+),
+
 
         ],
 
@@ -112,7 +126,8 @@ img(),
           StaggeredTile.extent(1, 130),
         ],
       ),
-        backgroundColor: Colors.black
+        backgroundColor: Colors.grey,
+
 
     );
   }
@@ -121,17 +136,16 @@ class img extends StatelessWidget{
   Widget build(BuildContext context)
   {
     return new Scaffold(
-      body: new ListView(
-        children: <Widget>[
-          Image.asset(
-            'assets/images/ppl.jpg',
-            matchTextDirection: true,
-            fit: BoxFit.fitWidth,
-
-
+      body: new Container(
+        decoration: new BoxDecoration(
+          image: new DecorationImage(
+            image: new AssetImage("assets/images/ppl.jpg"),
+            fit: BoxFit.cover,
           ),
-        ],
+        ),
+        child: null /* add child content here */,
       ),
+
 
 
 

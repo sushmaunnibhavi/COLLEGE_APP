@@ -40,30 +40,17 @@ class SignInDemoState extends State<SignInDemo> {
 
   Future<void> _handleGetContact() async {
     setState(() {
-      _contactText = "Loading contact info...";
+      _contactText = "WELCOME!!!";
     });
     final http.Response response = await http.get(
       'https://people.googleapis.com/v1/people/me/connections'
           '?requestMask.includeField=person.names',
       headers: await _currentUser.authHeaders,
     );
-    if (response.statusCode != 200) {
-      setState(() {
-        _contactText = "People API gave a ${response.statusCode} "
-            "response. Check logs for details.";
-      });
-      print('People API ${response.statusCode} response: ${response.body}');
-      return;
-    }
+
     final Map<String, dynamic> data = json.decode(response.body);
     final String namedContact = _pickFirstNamedContact(data);
-    setState(() {
-      if (namedContact != null) {
-        _contactText = "I see you know $namedContact!";
-      } else {
-        _contactText = "No contacts to display.";
-      }
-    });
+
   }
 
   String _pickFirstNamedContact(Map<String, dynamic> data) {
@@ -121,10 +108,6 @@ class SignInDemoState extends State<SignInDemo> {
               Navigator.pushNamed(context, 'splash');
             },
           ),
-          new RaisedButton(
-            child: const Text('SIGN IN'),
-            onPressed: _handleSignIn,
-          ),
         ],
       );
     } else {
@@ -136,7 +119,9 @@ class SignInDemoState extends State<SignInDemo> {
             child: const Text('SIGN IN'),
             onPressed: _handleSignIn,
           ),
+
         ],
+
       );
     }
   }
@@ -147,11 +132,14 @@ class SignInDemoState extends State<SignInDemo> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: const Text('Google Sign In'),
+          title: const Text('COLLEGE NETWORK'),
+          backgroundColor: Colors.black,
         ),
         body: new ConstrainedBox(
           constraints: const BoxConstraints.expand(),
           child: _buildBody(),
-        ));
+
+        ),
+        backgroundColor: Colors.grey);
   }
 }

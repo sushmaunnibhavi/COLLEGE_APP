@@ -13,7 +13,7 @@ class _CompPageState extends State<CompPage>
     return new Scaffold(
       appBar: AppBar(
         title: Text('COMPUTER SCIENCE DEPARTMENT'),
-
+backgroundColor: Colors.black,
       ),
 
       body:new ListView(
@@ -26,11 +26,18 @@ class _CompPageState extends State<CompPage>
 
 
           ),
-         Text('The Computer Science and Engineering department is one of the pioneering departments at NMIT. The department was established in 2001. The department is progressing dynamically in all academic and research areas. '),
-          Text('The objective of the department is to educate, train and develop world class research and IT professionals with a mastery of hardware and software skills and also soft skills required for professional success. '),
-          Text('The Department has a student branch association called “CRYPTEC” which provides the platform for both technical and extracurricular activities. Through this association, students are motivated towards innovation and presenting papers in International Conferences like ICASIDO9, INNOVATE-INDIA 09, etc.'),
+         Text('The Computer Science and Engineering department is one of the pioneering departments at NMIT. The department was established in 2001. The department is progressing dynamically in all academic and research areas. ',
+           style: TextStyle(color: Colors.black
+           ),),
+          Text('The objective of the department is to educate, train and develop world class research and IT professionals with a mastery of hardware and software skills and also soft skills required for professional success. ',
+            style: TextStyle(color: Colors.black
+            ),),
+          Text('The Department has a student branch association called “CRYPTEC” which provides the platform for both technical and extracurricular activities. Through this association, students are motivated towards innovation and presenting papers in International Conferences like ICASIDO9, INNOVATE-INDIA 09, etc.',
+            style: TextStyle(color: Colors.black
+            ),),
 
         ],),
+      backgroundColor: Colors.grey,
     );
 
   }

@@ -28,7 +28,7 @@ class dept extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('Departments'),
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.black,
         ),
 
         body: StaggeredGridView.count(crossAxisCount: 2,
@@ -44,8 +44,10 @@ class dept extends StatelessWidget {
                   Navigator.pushNamed(context, 'aero');
 
                 },
-          child: new Text('AERONAUTICAL'),
-          color: Colors.grey,),
+          child: new Text('AERONAUTICAL',
+          style: TextStyle(color: Colors.grey
+          ),),
+          color: Colors.black,),
 
     RaisedButton(
     onPressed: () {
@@ -53,8 +55,10 @@ class dept extends StatelessWidget {
     Navigator.pushNamed(context, 'comp');
 
     },
-      child: new Text('COMPUTER SCIENCE'),
-      color: Colors.grey,),
+      child: new Text('COMPUTER SCIENCE',
+    style: TextStyle(color: Colors.grey
+    ),),
+      color: Colors.black,),
 
     RaisedButton(
     onPressed: () {
@@ -62,35 +66,47 @@ class dept extends StatelessWidget {
     Navigator.pushNamed(context, 'ise');
 
     },
-      child: new Text('INFORMATION SCIIENCE'),
-      color: Colors.grey,),
+      child: new Text('INFORMATION SCIENCE'
+        ,
+        style: TextStyle(color: Colors.grey
+        ),),
+      color: Colors.black,),
 
     RaisedButton(
     onPressed: () {
     // Redirect to user "about" page.
-    Navigator.pushNamed(context, 'mechanical');
+    Navigator.pushNamed(context, 'mech');
 
     },
-      child: new Text('MECHANICAL'),
-      color: Colors.grey,),
+      child: new Text('MECHANICAL'
+        ,
+        style: TextStyle(color: Colors.grey
+        ),),
+      color: Colors.black,),
 
     RaisedButton(
     onPressed: () {
     // Redirect to user "about" page.
-    Navigator.pushNamed(context, 'electrical');
+    Navigator.pushNamed(context, 'ele');
 
     },
-      child: new Text('ELECTRICAL'),
-      color: Colors.grey,),
+      child: new Text('ELECTRICAL'
+        ,
+        style: TextStyle(color: Colors.grey
+        ),),
+      color: Colors.black,),
 
     RaisedButton(
     onPressed: () {
     // Redirect to user "about" page.
-    Navigator.pushNamed(context, 'electronics');
+    Navigator.pushNamed(context, 'eln');
 
     },
-      child: new Text('ELECTRONICS'),
-      color: Colors.grey,),
+      child: new Text('ELECTRONICS'
+        ,
+        style: TextStyle(color: Colors.grey
+        ),),
+      color: Colors.black,),
 
 
 
@@ -98,15 +114,15 @@ class dept extends StatelessWidget {
 
           staggeredTiles: [
 
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
-            StaggeredTile.extent(1, 130),
+            StaggeredTile.extent(1, 200),
+            StaggeredTile.extent(1, 200),
+            StaggeredTile.extent(1, 200),
+            StaggeredTile.extent(1, 200),
+            StaggeredTile.extent(1, 200),
+            StaggeredTile.extent(1, 200),
           ],
         ),
-        backgroundColor: Colors.black
+        backgroundColor: Colors.grey
 
     );
   }
