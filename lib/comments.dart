@@ -85,15 +85,17 @@ class HomeState extends State<Home> {
                   direction: Axis.vertical,
                   children: <Widget>[
                     ListTile(
-                      leading: Icon(Icons.info),
+                      leading: Icon(Icons.title),
                       title: TextFormField(
+
                         initialValue: "",
                         onSaved: (val) => item.title = val,
                         validator: (val) => val == "" ? val : null,
                       ),
                     ),
                     ListTile(
-                      leading: Icon(Icons.info),
+                      leading: Icon(Icons.text_fields,),
+
                       title: TextFormField(
                         initialValue: '',
                         onSaved: (val) => item.body = val,

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 // Import  pages.
-import 'about.page.dart';
 import 'home.page.dart';
 import 'splash.page.dart';
 import 'auth.dart';
@@ -18,7 +17,7 @@ import 'mech.dart';
 import 'electrical.dart';
 import 'electronics.dart';
 import 'contacts.dart';
-import 'chat.dart';
+
 
 void main() {
 
@@ -35,10 +34,7 @@ void main() {
     return new HomePage();
   }));
 
-  // Define about page.
-  router.define('about', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return new AboutPage();
-  }));
+
 
 
 
@@ -90,12 +86,6 @@ void main() {
 
   router.define('upload', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return new UploadPage();
-  }));
-
-
-
-  router.define('chat', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return new ChatApp();
   }));
 
 

@@ -13,14 +13,24 @@ class _ContactPageState extends State<ContactPage>
     return new Scaffold(
         appBar: new AppBar(
           title: new Text("Contacts"),
+          backgroundColor: Colors.black,
         ),
-        body: new ContactList(kContacts));
+        body:
+
+        new ContactList(kContacts),
+    backgroundColor: Colors.grey
+      ,);
   }
 }
 
 const kContacts = const <Contact>[
-  const Contact(fullName: 'Romain Hoogmoed', email: 'romain.hoogmoed@example.com'),
-  const Contact(fullName: 'Emilie Olsen', email: 'emilie.olsen@example.com')
+  const Contact(fullName: 'Dr. P.K. Dash,HOD of AE', email: 'ae@nmit.ac.in, pramodkumar.dash@nmit.ac.in'),
+  const Contact(fullName: 'Dr.Bharathi Ganesh,HOD of Civil', email: 'bharathi.ganesh@nmit.ac.in, HOD-Civil@nmit.ac.in '),
+  const Contact(fullName: 'Dr. Thippeswamy MN,HOD of CSE', email: 'thippeswamy.mn@nmit.ac.in,hod-cse@nmit.ac.in'),
+  const Contact(fullName: 'Dr. Ranganathan V,HOD of EEE', email: 'ranganathan.v@nmit.ac.in'),
+  const Contact(fullName: 'Dr. H.C.Nagaraj,HOD of ECE', email: 'nagaraj.hc@nmit.ac.in'),
+  const Contact(fullName: 'Dr. Sanjay H. A.,HOD of ISE', email: 'sanjay.ha@nmit.ac.in'),
+  const Contact(fullName: 'Dr. J. Sudheer Reddy,HOD of ME', email: 'sudheerreddy.j@nmit.ac.in; sudheerreddynmit@gmail.com'),
 ];
 
 class ContactList extends StatelessWidget {
@@ -47,6 +57,7 @@ class _ContactListItem extends ListTile {
       subtitle: new Text(contact.email),
 
       leading: new CircleAvatar(child: new Text(contact.fullName[0]),
+        backgroundColor: Colors.black,
      ),
 
   );

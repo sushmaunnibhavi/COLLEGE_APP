@@ -18,10 +18,6 @@ class _SplashPageState extends State<SplashPage> {
 
       body: dashboard()
 
-
-
-
-
     );
   }
 }
@@ -32,8 +28,10 @@ class dashboard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Dashboard'),
-backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
+
       ),
+      backgroundColor: Colors.grey,
 
       body:
       StaggeredGridView.count(crossAxisCount: 2,
@@ -55,6 +53,7 @@ img(),
 
 
           ),
+
           IconButton(
             icon: Icon(Icons.file_upload),
             onPressed: () {
@@ -64,6 +63,7 @@ img(),
             iconSize: 40,
             color: Colors.black,
           ),
+
           IconButton(
             icon: Icon(Icons.school),
             onPressed: () {
@@ -85,19 +85,6 @@ img(),
             color: Colors.black,
           ),
 
-IconButton(
-
-  icon: Icon(Icons.message),
-  onPressed: () {
-    // Redirect to user "about" page.
-    Navigator.pushNamed(context, 'chat');
-  }, // null disables the button
-  iconSize: 40,
-
-  color: Colors.black,
-
-
-),
 
 IconButton(
 
@@ -114,6 +101,7 @@ IconButton(
 ),
 
 
+
         ],
 
         staggeredTiles: [
@@ -122,11 +110,13 @@ IconButton(
           StaggeredTile.extent(1, 130),
           StaggeredTile.extent(1, 130),
           StaggeredTile.extent(1, 130),
-          StaggeredTile.extent(1, 130),
-          StaggeredTile.extent(1, 130),
+          StaggeredTile.extent(2, 200),
+
+
+          
         ],
       ),
-        backgroundColor: Colors.grey,
+
 
 
     );

@@ -140,6 +140,6 @@ class SignInDemoState extends State<SignInDemo> {
           child: _buildBody(),
 
         ),
-        backgroundColor: Colors.grey);
+        backgroundColor: Colors.amber);
   }
 }
