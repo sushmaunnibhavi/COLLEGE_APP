@@ -62,6 +62,13 @@ flutter:
   - assets/images/comp.png
   - assets/images/ise.png
   - assets/images/mech.png
+  - assets/images/back.jpg
+  - assets/images/book.gif
+  - assets/images/dash.jpeg
+  - assets/images/white.jpeg
+  - assets/images/whi.jpg
+  - assets/images/ele.png
+  - assets/images/eln.png
 
 
   # To add assets to your application, add an assets section, like this:

@@ -19,7 +19,7 @@ backgroundColor: Colors.black,
       body:new ListView(
         children: <Widget>[
           Image.asset(
-            'assets/images/aero.jpeg',
+            'assets/images/eln.png',
             matchTextDirection: true,
             fit: BoxFit.fitWidth,
 

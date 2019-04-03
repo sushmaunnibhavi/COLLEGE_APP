@@ -41,6 +41,7 @@ class SignInDemoState extends State<SignInDemo> {
   Future<void> _handleGetContact() async {
     setState(() {
       _contactText = "WELCOME!!!";
+
     });
     final http.Response response = await http.get(
       'https://people.googleapis.com/v1/people/me/connections'
@@ -50,7 +51,6 @@ class SignInDemoState extends State<SignInDemo> {
 
     final Map<String, dynamic> data = json.decode(response.body);
     final String namedContact = _pickFirstNamedContact(data);
-
   }
 
   String _pickFirstNamedContact(Map<String, dynamic> data) {
@@ -104,7 +104,7 @@ class SignInDemoState extends State<SignInDemo> {
           ),
           new RaisedButton(
             child: const Text('DASHBOARD'),
-            onPressed: (){
+            onPressed: () {
               Navigator.pushNamed(context, 'splash');
             },
           ),
@@ -114,10 +114,11 @@ class SignInDemoState extends State<SignInDemo> {
       return new Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          const Text("You are not currently signed in."),
+
           new RaisedButton(
             child: const Text('SIGN IN'),
             onPressed: _handleSignIn,
+
           ),
 
         ],
@@ -127,19 +128,34 @@ class SignInDemoState extends State<SignInDemo> {
   }
 
 
-
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: const Text('COLLEGE NETWORK'),
-          backgroundColor: Colors.black,
+    return Stack(
+      children: <Widget>[
+        new Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("assets/images/book.gif"),
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
-        body: new ConstrainedBox(
-          constraints: const BoxConstraints.expand(),
-          child: _buildBody(),
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: new AppBar(
+            title: new Text("COLLEGE NETWORK"),
+            backgroundColor: Colors.black,
+            elevation: 0.0,
+          ),
+          body: new ConstrainedBox(
+            constraints: const BoxConstraints.expand(),
+            child: _buildBody(),
 
+          ),
         ),
-        backgroundColor: Colors.amber);
+      ],
+    );
   }
 }
